@@ -1,13 +1,13 @@
 package com.ikm.PGR.Contract;
 
 
-import com.ikm.PGR.Validation.ValidDate;
+import jakarta.persistence.CascadeType;
+
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -30,7 +30,6 @@ public class GrievianceRequest {
     @NotEmpty(message = "Grievance cannot be empty")
     private String grievance;
 
-   @ValidDate
     private LocalDate dateofsubmission;
 
 }
